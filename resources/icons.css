@@ -71,13 +71,13 @@
 	fill: currentColor !important;
 }
 .tab-icon-overlay[soundplaying] {
-	list-style-image: url(./icons/tab-audio-playing.svg) !important;
+	list-style-image: url(./icons/tab/tab-audio-playing.svg) !important;
 }
 .tab-icon-overlay[muted] {
-	list-style-image: url(./icons/tab-audio-muted.svg) !important;
+	list-style-image: url(./icons/tab/tab-audio-muted.svg) !important;
 }
 .tab-icon-overlay[activemedia-blocked] {
-	list-style-image: url(./icons/tab-audio-blocked.svg) !important;
+	list-style-image: url(./icons/tab/tab-audio-blocked.svg) !important;
 }
 .tab-icon-overlay[pictureinpicture] {
 	list-style-image: url(./icons/pictureinpicture.svg) !important;
@@ -117,13 +117,13 @@
 	--icon-fill: var(--toolbox-textcolor) !important;
 }
 .tab-audio-button[soundplaying] {
-	--button-icon: url(./icons/tab-audio-playing.svg) !important;
+	--button-icon: url(./icons/tab/tab-audio-playing.svg) !important;
 }
 .tab-audio-button[muted] {
-	--button-icon: url(./icons/tab-audio-muted.svg) !important;
+	--button-icon: url(./icons/tab/tab-audio-muted.svg) !important;
 }
 .tab-audio-button[activemedia-blocked] {
-	--button-icon: url(./icons/tab-audio-blocked.svg) !important;
+	--button-icon: url(./icons/tab/tab-audio-blocked.svg) !important;
 }
 .tab-audio-button[pictureinpicture] {
 	--button-icon: url(./icons/pictureinpicture.svg) !important;
@@ -186,15 +186,15 @@
 }
 /* Changes the tracking protection icons to Photon's */
 #tracking-protection-icon-container > #tracking-protection-icon-box > #tracking-protection-icon {
-	list-style-image: url(./icons/tracking-protection-no-trackers.svg) !important;
+	list-style-image: url(./icons/tp/tracking-protection-no-trackers.svg) !important;
 	fill: var(--toolbarbutton-icon-fill) 
 }
 #tracking-protection-icon-container > #tracking-protection-icon-box[hasException] > #tracking-protection-icon {
-	list-style-image: url(./icons/tracking-protection-disabled.svg) !important;
+	list-style-image: url(./icons/tp/tracking-protection-disabled.svg) !important;
 	fill: var(--toolbarbutton-icon-fill) 
 }
 #tracking-protection-icon-container > #tracking-protection-icon-box[active] > #tracking-protection-icon {
-	list-style-image: url(./icons/tracking-protection-animation.svg) !important
+	list-style-image: url(./icons/tp/tracking-protection-animation.svg) !important
 }
 /* Changes the extension icon to Photon's */
 #identity-box.extensionPage #identity-icon {
@@ -203,7 +203,7 @@
 /* Ensures that you can see the tracking protection icon in dark-mode */
 @media (prefers-color-scheme: dark) {
 	#tracking-protection-icon-container > #tracking-protection-icon-box[active] > #tracking-protection-icon {
-		list-style-image: url(./icons/tracking-protection-animation-brighttext.svg) !important;
+		list-style-image: url(./icons/tp/tracking-protection-animation-brighttext.svg) !important;
 	}
 }
 
@@ -277,7 +277,7 @@
 	border-radius: 0 !important;
 }
 .focus-tab-by-prompt-icon {
-	list-style-image: url(./icons/tab.svg) !important;
+	list-style-image: url(./icons/tab/tab.svg) !important;
 }
 .question-icon {
 	list-style-image: url(./icons/help.svg) !important;
@@ -428,10 +428,10 @@
 }
 /* end credits */
 #star-button, #context-bookmarkpage {
-	list-style-image: url(./icons/bookmark-hollow.svg) !important;
+	list-style-image: url(./icons/bookmarks/bookmark-hollow.svg) !important;
 }
 #star-button[starred], #context-bookmarkpage[starred] {
-	list-style-image: url(./icons/bookmark.svg) !important;
+	list-style-image: url(./icons/bookmarks/bookmark.svg) !important;
 }
 #reader-mode-button-icon {
 	list-style-image: url(./icons/readerMode.svg) !important;
@@ -482,7 +482,7 @@ img[src="chrome://browser/content/shopping/assets/shopping.svg"] {
 	list-style-image: url(./icons/history.svg) !important;
 }
 #bookmarks-menu-button {
-	list-style-image: url(./icons/bookmark-star-on-tray.svg) !important;
+	list-style-image: url(./icons/bookmarks/bookmark-star-on-tray.svg) !important;
 }
 #characterencoding-button {
 	list-style-image: url(./icons/characterEncoding.svg) !important;
@@ -543,7 +543,7 @@ img[src="chrome://browser/content/shopping/assets/shopping.svg"] {
 	list-style-image: url(./icons/loading.svg) !important;
 }
 #copy-button, #select-translations-panel-copy-button {
-	list-style-image: url(./icons/edit-copy.svg) !important;
+	list-style-image: url(./icons/edit/edit-copy.svg) !important;
 }
 #PlacesChevron,
 #nav-bar-overflow-button {
@@ -703,7 +703,7 @@ menupopup > menu::after {
 
 /* Second section */
 #appMenu-bookmarks-button .toolbarbutton-icon {
-	list-style-image: url(./icons/bookmark-star-on-tray.svg) !important;
+	list-style-image: url(./icons/bookmarks/bookmark-star-on-tray.svg) !important;
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
 }
 #appMenu-history-button .toolbarbutton-icon {
@@ -863,7 +863,7 @@ menupopup > menu::after {
 		list-style-image: url(./icons/profiles.svg) !important;
 	}
 	#profiles-edit-this-delete-button .toolbarbutton-icon {
-		list-style-image: url(./icons/edit.svg) !important;
+		list-style-image: url(./icons/edit/edit.svg) !important;
 	}
 	#profiles-delete-this-profile-button .toolbarbutton-icon {
 		list-style-image: url(./icons/delete.svg) !important;
@@ -877,7 +877,7 @@ menupopup > menu::after {
 		list-style-image: url(./icons/add.svg) !important;
 	}
 	#profiles-edit-this-profile-button .toolbarbutton-icon {
-		list-style-image: url(./icons/edit.svg) !important;
+		list-style-image: url(./icons/edit/edit.svg) !important;
 	}
 }
 /* Exit icon */
@@ -981,7 +981,7 @@ menupopup > menu::after {
 	list-style-image: url(./icons/settings.svg) !important;
 }
 #urlbar-engine-one-off-item-tabs image, #search-button-tabs .menu-iconic-icon, #searchmode-switcher-icon[style*="tabs.svg"] {
-	list-style-image: url(./icons/tab.svg) !important;
+	list-style-image: url(./icons/tab/tab.svg) !important;
 }
 #urlbar-engine-one-off-item-history image, .search-panel-tree > .autocomplete-richlistitem[originaltype="fromhistory"] > .ac-type-icon {
 	list-style-image: url(./icons/history.svg) !important;
@@ -1003,14 +1003,14 @@ menupopup > menu::after {
 	&[src="chrome://browser/skin/quickactions.svg"] {
 		content: url(./icons/quick-actions.svg) !important;
 	}
-	&[src="chrome://browser/skin/tab.svg"] {
-		content: url(./icons/tab.svg) !important;
+	&[src="chrome://browser/skin/tab/tab.svg"] {
+		content: url(./icons/tab/tab.svg) !important;
 	}
-	&[src="chrome://browser/skin/bookmark.svg"] {
-		content: url(./icons/bookmark.svg) !important;
+	&[src="chrome://browser/skin/bookmarks/bookmark.svg"] {
+		content: url(./icons/bookmarks/bookmark.svg) !important;
 	}
 	&[src="chrome://global/skin/icons/clipboard.svg"] {
-		content: url(./icons/edit-paste.svg) !important;
+		content: url(./icons/edit/edit-paste.svg) !important;
 	}
 	&[src="chrome://global/skin/icons/trending.svg"] {
 		content: url(./icons/trending.svg) !important;
@@ -1026,14 +1026,14 @@ menupopup > menu::after {
 	&[style*="chrome://browser/skin/quickactions.svg"] {
 		list-style-image: url(./icons/quick-actions.svg) !important;
 	}
-	&[style*="chrome://browser/skin/tab.svg"] {
-		list-style-image: url(./icons/tab.svg) !important;
+	&[style*="chrome://browser/skin/tab/tab.svg"] {
+		list-style-image: url(./icons/tab/tab.svg) !important;
 	}
-	&[style*="chrome://browser/skin/bookmark.svg"] {
-		list-style-image: url(./icons/bookmark.svg) !important;
+	&[style*="chrome://browser/skin/bookmarks/bookmark.svg"] {
+		list-style-image: url(./icons/bookmarks/bookmark.svg) !important;
 	}
 	&[style*="chrome://global/skin/icons/clipboard.svg"] {
-		list-style-image: url(./icons/edit-paste.svg) !important;
+		list-style-image: url(./icons/edit/edit-paste.svg) !important;
 	}
 	&[style*="chrome://global/skin/icons/trending.svg"] {
 		list-style-image: url(./icons/trending.svg) !important;
@@ -1065,14 +1065,14 @@ menupopup > menu::after {
 				opacity: 0;
 			}
 		}
-		&[image="chrome://browser/skin/tab.svg"], &[image="chrome://browser/skin/tabs.svg"] {
-			background-image: url(./icons/tab.svg) !important;
+		&[image="chrome://browser/skin/tab/tab.svg"], &[image="chrome://browser/skin/tab/tabs.svg"] {
+			background-image: url(./icons/tab/tab.svg) !important;
 			& image {
 				opacity: 0;
 			}
 		}
-		&[image="chrome://browser/skin/bookmark.svg"] {
-			background-image: url(./icons/bookmark.svg) !important;
+		&[image="chrome://browser/skin/bookmarks/bookmark.svg"] {
+			background-image: url(./icons/bookmarks/bookmark.svg) !important;
 			& image {
 				opacity: 0;
 			}
@@ -1102,7 +1102,7 @@ menupopup > menu::after {
 	list-style-image: url(./icons/quick-actions.svg) !important;
 }
 #urlbar-engine-one-off-item-bookmarks {
-	list-style-image: url(./icons/bookmark.svg) !important;
+	list-style-image: url(./icons/bookmarks/bookmark.svg) !important;
 }
 #urlbar-search-mode-indicator-close {
 	background-image: url(./icons/close-icon2.svg) !important;
@@ -1128,11 +1128,11 @@ menupopup > menu::after {
 	background: url(./icons/pin-12.svg) !important;
 }
 .urlbarView-row[type="switchtab"] .urlbarView-type-icon {
-	background: url(./icons/tab-12.svg) !important;
+	background: url(./icons/tab/tab-12.svg) !important;
 	fill: var(--photon-accent);
 }
 .urlbarView-row[type="bookmark"] .urlbarView-type-icon {
-	background: url(./icons/bookmark-12.svg) !important;
+	background: url(./icons/bookmarks/bookmark-12.svg) !important;
 }
 .urlbarView-button-menu {
 	background-image: url("./icons/more.svg") !important;
@@ -1198,7 +1198,7 @@ menupopup > menu::after {
 /* specificticiyicity is very important in css - :nerd_face: */
 :root #PanelUI-history #appMenuRecentlyClosedTabs .toolbarbutton-icon {
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
-	list-style-image: url(./icons/tab.svg) !important;
+	list-style-image: url(./icons/tab/tab.svg) !important;
 }
 #appMenuRecentlyClosedTabs, #panelMenuBookmarkThisPage {
 	margin-top: -3px !important;
@@ -1226,7 +1226,7 @@ menupopup > menu::after {
 /* bookmarks */
 :root #PanelUI-bookmarks #panelMenuBookmarkThisPage .toolbarbutton-icon {
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
-	list-style-image: url(./icons/bookmark-hollow.svg) !important;
+	list-style-image: url(./icons/bookmarks/bookmark-hollow.svg) !important;
 }
 :root #PanelUI-bookmarks #panelMenu_searchBookmarks .toolbarbutton-icon {
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
@@ -1234,7 +1234,7 @@ menupopup > menu::after {
 }
 :root #PanelUI-bookmarks #panelMenu_viewBookmarksToolbar .toolbarbutton-icon {
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
-	list-style-image: url(./icons/bookmark-star-on-tray.svg) !important;
+	list-style-image: url(./icons/bookmarks/bookmark-star-on-tray.svg) !important;
 }
 /* fxa menu */
 :root #appMenu-popup #PanelUI-fxa #fxa-manage-account-button {
@@ -1325,7 +1325,7 @@ menupopup > menu::after {
 }
 :root #PanelUI-fxa toolbarbutton[itemtype="showinactivebutton"] .toolbarbutton-icon {
 	margin-inline-end: calc(var(--appmenu-icon-inline-end) * 2) !important;
-	list-style-image: url(./icons/tab.svg) !important;
+	list-style-image: url(./icons/tab/tab.svg) !important;
 }
 :root #PanelUI-sendTabToDevice .sendToDevice-device {
 	padding-top: 4px !important;
@@ -1354,16 +1354,16 @@ menupopup > menu::after {
 	padding-inline-start: 21px !important;
 }
 #sidebar-switcher-bookmarks:is(menuitem) .menu-text {
-	background-image: url(./icons/bookmark.svg);
+	background-image: url(./icons/bookmarks/bookmark.svg);
 }
 #sidebar-switcher-history:is(menuitem) .menu-text {
 	background-image: url(./icons/history.svg);
 }
 #sidebar-switcher-tabs:is(menuitem) .menu-text {
-	background-image: url(./icons/tab.svg);
+	background-image: url(./icons/tab/tab.svg);
 }
 #sidebar-switcher-genai-chat:is(menuitem) .menu-text {
-	background-image: url(./icons/glyph-highlights-16.svg);
+	background-image: url(./icons/glyph/glyph-highlights-16.svg);
 }
 #sidebar-reverse-position:is(menuitem) .menu-text {
 	background-image: url(./icons/import-export-rotate90.svg);
@@ -1375,7 +1375,7 @@ menuitem[data-l10n-id="sidebar-menu-close"] .menu-text {
 /* side panel */
 #sidebar-box[sidebarcommand="viewBookmarksSidebar"] > #sidebar-header 
   > #sidebar-switcher-target > #sidebar-icon {
-	list-style-image: url(./icons/bookmark.svg) !important;
+	list-style-image: url(./icons/bookmarks/bookmark.svg) !important;
 }
 #sidebar-box[sidebarcommand="viewHistorySidebar"] > #sidebar-header 
   > #sidebar-switcher-target > #sidebar-icon {
@@ -1383,11 +1383,11 @@ menuitem[data-l10n-id="sidebar-menu-close"] .menu-text {
 }
 #sidebar-box[sidebarcommand="viewTabsSidebar"] > #sidebar-header 
   > #sidebar-switcher-target > #sidebar-icon {
-	list-style-image: url(./icons/tab.svg) !important;
+	list-style-image: url(./icons/tab/tab.svg) !important;
 }
 #sidebar-box[sidebarcommand="viewGenaiChatSidebar"] > #sidebar-header 
   > #sidebar-switcher-target > #sidebar-icon {
-	list-style-image: url(./icons/glyph-highlights-16.svg) !important;
+	list-style-image: url(./icons/glyph/glyph-highlights-16.svg) !important;
 	width: 16px !important;
 	-moz-context-properties: fill !important;
 	fill: currentColor !important;
@@ -1399,7 +1399,7 @@ menuitem[data-l10n-id="sidebar-menu-close"] .menu-text {
 /* Libraries */
 #appMenu-library-bookmarks-button .toolbarbutton-icon {
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
-	list-style-image: url(./icons/bookmark.svg) !important;
+	list-style-image: url(./icons/bookmarks/bookmark.svg) !important;
 }
 #appMenu-library-history-button .toolbarbutton-icon {
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
@@ -1437,10 +1437,10 @@ menuitem[data-l10n-id="sidebar-menu-close"] .menu-text {
 	list-style-image: url(./icons/close-icon2.svg) !important;
 }
 .all-tabs-mute-button:not([muted]) {
-	list-style-image: url(./icons/tab-audio-playing.svg) !important;
+	list-style-image: url(./icons/tab/tab-audio-playing.svg) !important;
 }
 .all-tabs-mute-button[muted] {
-	list-style-image: url(./icons/tab-audio-muted.svg) !important;
+	list-style-image: url(./icons/tab/tab-audio-muted.svg) !important;
 }
 #allTabsMenu-searchTabs .toolbarbutton-icon {
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
@@ -1463,7 +1463,7 @@ menuitem[data-l10n-id="sidebar-menu-close"] .menu-text {
 }
 #allTabsMenu-hiddenTabsButton .toolbarbutton-icon {
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
-	list-style-image: url(./icons/glyph-topsites.svg) !important;
+	list-style-image: url(./icons/glyph/glyph-topsites.svg) !important;
 }
 #allTabsMenu-containerTabsView vbox .subviewbutton:last-child .toolbarbutton-icon {
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
@@ -1589,11 +1589,11 @@ treechildren::-moz-tree-image(title, container){
 }
 /* Bookmarks toolbar folder */
 treechildren::-moz-tree-image(container, queryFolder_toolbar_____) {
-	list-style-image: url("chrome://browser/skin/places/bookmarksToolbar.svg") !important;
+	list-style-image: url("chrome://browser/skin/places/bookmarks/bookmarksToolbar.svg") !important;
 }
 /* Bookmarks menu folder */
 treechildren::-moz-tree-image(container, queryFolder_menu________) {
-	list-style-image: url("chrome://browser/skin/places/bookmarksMenu.svg") !important;
+	list-style-image: url("chrome://browser/skin/places/bookmarks/bookmarksMenu.svg") !important;
 }
 /* Tag items */
 treechildren::-moz-tree-image(title, query, tagContainer),
@@ -1611,7 +1611,7 @@ treechildren::-moz-tree-image(query, OrganizerQuery_downloads__v) {
 }
 /* And finally all bookmarks folder */
 treechildren::-moz-tree-image(query, OrganizerQuery_allbms_____v) {
-	list-style-image: url(./icons/bookmark.svg) !important;
+	list-style-image: url(./icons/bookmarks/bookmark.svg) !important;
 }
 
 /* Back-Forward Menu */
@@ -1629,10 +1629,10 @@ treechildren::-moz-tree-image(query, OrganizerQuery_allbms_____v) {
 	list-style-image: url("./icons/folder2.svg") !important;
 }
 #editBMPanel_folderMenuList[selectedGuid="toolbar_____"], #editBMPanel_toolbarFolderItem {
-	list-style-image: url("./icons/bookmarksToolbar.svg") !important;
+	list-style-image: url("./icons/bookmarks/bookmarksToolbar.svg") !important;
 }
 #editBMPanel_folderMenuList[selectedGuid="menu________"], #editBMPanel_bmRootItem {
-	list-style-image: url("./icons/bookmarksMenu.svg") !important;
+	list-style-image: url("./icons/bookmarks/bookmarksMenu.svg") !important;
 }
 /* Screenshots */
 img {
@@ -1643,7 +1643,7 @@ img {
 		content: url("./icons/reload.svg") !important;
 	}
 	#copy > & {
-		content: url("./icons/edit-copy.svg") !important;
+		content: url("./icons/edit/edit-copy.svg") !important;
 	}
 	#download > & {
 		content: url("./icons/download-icons.svg#arrow-with-bar") !important;
@@ -1655,11 +1655,11 @@ img {
 }
 /* Arifishal Intelighense thing */
 .content-shortcuts {
-	background-image: url("./icons/glyph-highlights-16.svg") !important;
+	background-image: url("./icons/glyph/glyph-highlights-16.svg") !important;
 }
 button > img, span > img, label > img {
 	&[src="chrome://mozapps/skin/extensions/category-discover.svg"], &[src="chrome://global/skin/icons/highlights.svg"] {
-		content: url("./icons/glyph-highlights-16.svg") !important;
+		content: url("./icons/glyph/glyph-highlights-16.svg") !important;
 	}
 	&[src="chrome://browser/content/firefoxview/view-syncedtabs.svg"], &[src="chrome://browser/skin/synced-tabs.svg"] {
 		content: url("./icons/sync.svg") !important;
@@ -1670,8 +1670,8 @@ button > img, span > img, label > img {
 	&[src="chrome://browser/skin/preferences/category-general.svg"], &[src="chrome://global/skin/icons/settings.svg"] {
 		content: url("./icons/settings.svg") !important;
 	}
-	&[src="chrome://browser/skin/bookmark-hollow.svg"] {
-		content: url("./icons/bookmark-hollow.svg") !important;
+	&[src="chrome://browser/skin/bookmarks/bookmark-hollow.svg"] {
+		content: url("./icons/bookmarks/bookmark-hollow.svg") !important;
 	}
 	&[src="chrome://browser/skin/sidebar-expanded.svg"] {
 		content: url("./icons/sidebar-expanded.svg") !important;
@@ -1732,7 +1732,7 @@ img[src="chrome://browser/skin/preferences/category-general.svg"] {
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
 	list-style-image: url(./icons/delete.svg) !important;
 }
-img[src="chrome://browser/skin/tabbrowser/tab-groups.svg"] {
+img[src="chrome://browser/skin/tab/tabbrowser/tab/tab-groups.svg"] {
 	content: url(./icons/window.svg) !important; /* TEMP ICON */
 }
 /* shadow root */

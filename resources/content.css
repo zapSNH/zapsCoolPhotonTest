@@ -345,11 +345,11 @@
 	}
 	.sync-engine-bookmarks .checkbox-icon,
 	.sync-engine-bookmarks.sync-engine-image {
-		list-style-image: url("./icons/bookmark.svg") !important;
+		list-style-image: url("./icons/bookmarks/bookmark.svg") !important;
 	}
 	.sync-engine-tabs .checkbox-icon,
 	.sync-engine-tabs.sync-engine-image {
-		list-style-image: url("./icons/tab.svg") !important;
+		list-style-image: url("./icons/tab/tab.svg") !important;
 	}
 	.sync-engine-addons .checkbox-icon,
 	.sync-engine-addons.sync-engine-image {
@@ -387,7 +387,7 @@
 		content: url("./icons/download-icons.svg#arrow-with-bar") !important;
 	}
 	#copy > img {
-		content: url("./icons/edit-copy.svg") !important;
+		content: url("./icons/edit/edit-copy.svg") !important;
 	}
 	#cancel > img {
 		content: url("./icons/close.svg") !important;
@@ -509,7 +509,7 @@
 		background-image: url("./icons/history.svg") !important;
 	}
 	.icon.icon-bookmark-added {
-		background-image: url("./icons/bookmark.svg") !important;
+		background-image: url("./icons/bookmarks/bookmark.svg") !important;
 	}
 	.icon.icon-download {
 		background-image: url("./icons/download-icons.svg#arrow-with-bar") !important;
@@ -569,7 +569,7 @@
 		min-height: 16px;
 	}
 	.section-title span {
-		background-image: url(./icons/glyph-topsites.svg) !important;
+		background-image: url(./icons/glyph/glyph-topsites.svg) !important;
 		background-repeat: no-repeat;
 		background-position-y: 60%;
 		padding-inline-start: 20px;
@@ -584,7 +584,7 @@
 		background-image: url(./icons/pocket.svg) !important;
 	}
 	section[data-section-id="highlights"] .section-title span {
-		background-image: url(./icons/glyph-highlights-16.svg) !important;
+		background-image: url(./icons/glyph/glyph-highlights-16.svg) !important;
 		background-size: 16px !important;
 	}
 	.top-site-outer .search-topsite {
@@ -1009,7 +1009,7 @@
 		list-style-image: url("./icons/sync.svg") !important;
 	}
 	#category-experimental > .category-icon {
-		list-style-image: url("./icons/glyph-experiments.svg") !important;
+		list-style-image: url("./icons/glyph/glyph-experiments.svg") !important;
 	}
 	#category-theme > .category-icon,
 	#category-design > .category-icon {
@@ -1043,7 +1043,7 @@
 		list-style-image: url("./icons/help.svg") !important;
 	}
 	#trackingProtectionShield {
-		list-style-image: url(./icons/tracking-protection-big.svg) !important;
+		list-style-image: url(./icons/tp/tracking-protection-big.svg) !important;
 	}
 	.indent {
 		-moz-context-properties: fill, fill-opacity !important;
@@ -1126,7 +1126,7 @@
 		list-style-image: url(./icons/microphone.svg) !important;
 	}
 	.speaker-icon {
-		list-style-image: url(./icons/tab-audio-playing.svg) !important;
+		list-style-image: url(./icons/tab/tab-audio-playing.svg) !important;
 	}
 	.desktop-notification-icon {
 		list-style-image: url(./icons/desktop-notification.svg) !important;
@@ -1153,7 +1153,7 @@
 		content: url("./icons/find-in-page.svg") !important;
 	}
 	#homeContentsGroup vbox[data-subcategory="topsites"] > checkbox .checkbox-label-box::before {
-		content: url("./icons/glyph-topsites.svg") !important;
+		content: url("./icons/glyph/glyph-topsites.svg") !important;
 	}
 	#homeContentsGroup vbox[data-subcategory="weather"] .checkbox-label-box::before {
 		content: url("./icons/weather.svg") !important;
@@ -1162,7 +1162,7 @@
 		content: url("./icons/pocket.svg") !important;
 	}
 	#homeContentsGroup vbox[data-subcategory="highlights"] > checkbox .checkbox-label-box::before {
-		content: url("./icons/glyph-highlights-16.svg") !important;
+		content: url("./icons/glyph/glyph-highlights-16.svg") !important;
 		width: 16px;
 	}
 	.updateSettingCrossUserWarningContainer {
@@ -1242,7 +1242,7 @@
 	}
 	.category {
 		&[name="discover"] {
-			background-image: url("./icons/glyph-highlights-16.svg") !important
+			background-image: url("./icons/glyph/glyph-highlights-16.svg") !important
 		
 		
 		
@@ -1377,7 +1377,7 @@
 		&::before {
 			content: "";
 			position: absolute;
-			background-image: url(./icons/glyph-topsites.svg);
+			background-image: url(./icons/glyph/glyph-topsites.svg);
 			background-repeat: no-repeat;
 			-moz-context-properties: fill;
 			fill: currentColor;
@@ -1401,13 +1401,13 @@
 		}
 	}
 	fxview-category-button[name="recentbrowsing"]::before {
-		background-image: url(./icons/glyph-highlights-16.svg);
+		background-image: url(./icons/glyph/glyph-highlights-16.svg);
 	}
 	fxview-category-button[name="opentabs"]::before {
-		background-image: url(./icons/tab.svg);
+		background-image: url(./icons/tab/tab.svg);
 	}
 	fxview-category-button[name="recentlyclosed"]::before {
-		background-image: url(./icons/tab-close.svg);
+		background-image: url(./icons/tab/tab-close.svg);
 	}
 	fxview-category-button[name="syncedtabs"]::before {
 		background-image: url(./icons/sync.svg);
@@ -1422,13 +1422,13 @@
 		translate: 2px;
 	}
 	.page-nav-icon[src="chrome://browser/content/firefoxview/view-recentbrowsing.svg"] {
-		content: url(./icons/glyph-highlights-16.svg);
+		content: url(./icons/glyph/glyph-highlights-16.svg);
 	}
 	.page-nav-icon[src="chrome://browser/content/firefoxview/view-opentabs.svg"] {
-		content: url(./icons/tab.svg);
+		content: url(./icons/tab/tab.svg);
 	}
 	.page-nav-icon[src="chrome://browser/content/firefoxview/view-recentlyclosed.svg"] {
-		content: url(./icons/tab-close.svg);
+		content: url(./icons/tab/tab-close.svg);
 	}
 	.page-nav-icon[src="chrome://browser/content/firefoxview/view-syncedtabs.svg"] {
 		content: url(./icons/sync.svg);
@@ -1574,8 +1574,8 @@
 	.colors-button {
 		background-image: url("./icons/customize.svg") !important;
 	}
-	img[src="chrome://global/skin/icons/edit-outline.svg"] {
-		content: url("./icons/edit.svg") !important;
+	img[src="chrome://global/skin/icons/edit/edit-outline.svg"] {
+		content: url("./icons/edit/edit.svg") !important;
 	}
 	.chevron-icon {
 		background-image: url("./icons/arrow-dropdown-16.svg") !important;
@@ -1952,7 +1952,7 @@
 @-moz-document url-prefix("about:tabcrashed") {
 	@media (min-width: 970px) {
 		.title {
-			background-image: url("chrome://browser/skin/tab-crashed.svg") !important;
+			background-image: url("chrome://browser/skin/tab/tab-crashed.svg") !important;
 		}
 	}
 }

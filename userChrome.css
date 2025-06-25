@@ -4,7 +4,7 @@
 /* Variables (colors, border-radii, padding, etc.) + some other stuff */
 @import url(./resources/variables.css);
 /* Tab and Urlbar design */
-@import url(./resources/tabs-and-urlbar.css);
+@import url(./resources/tab/tabs-and-urlbar.css);
 /* Icons */
 @import url(./resources/icons.css);
 /* Panels (App menu, context menus, popup menus, tooltips, etc.) */
