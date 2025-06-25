@@ -1,0 +1,64 @@
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: check current esr version
+      id: getesr
+      run: |
+        echo "version=$(cat ./.github/workflows/ESR_VERSION)" >> $GITHUB_OUTPUT
+
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        ref: ${{ steps.getesr.outputs.version }}esr
+
+    - name: add gh bot creds
+      run: |
+        git config user.name 'github-actions[bot]'
+        git config user.email 'github-actions[bot]@users.noreply.github.com'
+
+    - name: zip files & stash
+      run: |
+        rm -rf ./.github
+        zip -r -FS zapsCoolPhotonTheme-${{ github.ref_name }}-esr.zip *
+        git add zapsCoolPhotonTheme-${{ github.ref_name }}-esr.zip
+        git stash push zapsCoolPhotonTheme-${{ github.ref_name }}-esr.zip
+
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        ref: main
+        
+    - name: get previous tag (this repo) # https://github.com/WyriHaximus/github-action-get-previous-tag/issues/23#issuecomment-830632004
+      id: previoustag
+      run: |
+        echo "tag=$(git describe --abbrev=0 --tags $(git rev-list --tags --skip=1 --max-count=1))" >> "$GITHUB_OUTPUT"
+        
+    - name: get latest tag (webext repo)
+      id: webexttag
+      run: |
+        echo "e_tag=$(curl -s https://api.github.com/repos/zapSNH/zcpt-webextension/tags | jq -r '.[0].name')" >> "$GITHUB_OUTPUT"
+
+    - name: zip files & release notes
+      run: |
+        python3 .github/workflows/create_relnotes.py ${{ github.ref_name }} ${{ steps.previoustag.outputs.tag }} ${{ steps.webexttag.outputs.e_tag }}
+        rm -rf ./.github
+        zip -r -FS zapsCoolPhotonTheme-${{ github.ref_name }}.zip * -x "relnotes.md"
+        git stash pop
+        
+    - name: release
+      uses: softprops/action-gh-release@v2
+      env:
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}
+      with:
+        body_path: relnotes.md
+        files: |
+          zapsCoolPhotonTheme-${{ github.ref_name }}.zip
+          zapsCoolPhotonTheme-${{ github.ref_name }}-esr.zip
