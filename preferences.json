@@ -1,6 +1,26 @@
 [
 	{
         "type": "separator",
+        "label": "Fork"
+	},
+	{
+        "type": "dropdown",
+        "property": "uc.forks",
+		"value": "string",
+        "label": "Select a fork",
+		"default": "firefox",
+		"placeholder": false,
+		"options": [
+			{ "label": "Firefox", "value": "firefox" },
+			{ "label": "Waterfox", "value": "waterfox" },
+			{ "label": "Floorp", "value": "floorp" },
+			{ "label": "LibreWolf", "value": "librewolf" },
+			{ "label": "Tor Browser", "value": "tor" }
+		]
+    },
+
+	{
+        "type": "separator",
         "label": "Tabs"
     },
     {
@@ -91,7 +111,7 @@
         "label": "Transparent menus for Windows 11 and macOS (requires widget.windows.mica.popups set to 2 for Windows 11)"
     },
 
-	
+
 	{
         "type": "separator",
         "label": "Logos"
