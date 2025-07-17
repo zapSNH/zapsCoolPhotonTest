@@ -24,9 +24,9 @@ jobs:
         git config user.name 'github-actions[bot]'
         git config user.email 'github-actions[bot]@users.noreply.github.com'
 
-    - name: zip files & stash
+    - name: zip esr files & stash
       run: |
-        rm -rf ./.github
+        rm -rf ./.github theme.json preferences.json
         zip -r -FS zapsCoolPhotonTheme-${{ github.ref_name }}-esr.zip *
         git add zapsCoolPhotonTheme-${{ github.ref_name }}-esr.zip
         git stash push zapsCoolPhotonTheme-${{ github.ref_name }}-esr.zip
@@ -36,10 +36,10 @@ jobs:
         fetch-depth: 0
         ref: main
         
-    - name: get previous tag (this repo) # https://github.com/WyriHaximus/github-action-get-previous-tag/issues/23#issuecomment-830632004
+    - name: get previous tag (this repo)
       id: previoustag
       run: |
-        echo "tag=$(git describe --abbrev=0 --tags $(git rev-list --tags --skip=1 --max-count=1))" >> "$GITHUB_OUTPUT"
+        echo "tag=$(git tag --sort=-v:refname | sed -n '2p')" >> "$GITHUB_OUTPUT"
         
     - name: get latest tag (webext repo)
       id: webexttag
@@ -49,7 +49,7 @@ jobs:
     - name: zip files & release notes
       run: |
         python3 .github/workflows/create_relnotes.py ${{ github.ref_name }} ${{ steps.previoustag.outputs.tag }} ${{ steps.webexttag.outputs.e_tag }}
-        rm -rf ./.github
+        rm -rf ./.github theme.json preferences.json
         zip -r -FS zapsCoolPhotonTheme-${{ github.ref_name }}.zip * -x "relnotes.md"
         git stash pop
         
@@ -59,6 +59,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.TOKEN }}
       with:
         body_path: relnotes.md
+        discussion_category_name: Announcements
         files: |
           zapsCoolPhotonTheme-${{ github.ref_name }}.zip
           zapsCoolPhotonTheme-${{ github.ref_name }}-esr.zip
